@@ -5,11 +5,11 @@ function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-gray-900/90 backdrop-blur z-50 border-b border-gray-800">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav className="fixed top-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur z-50 border-b border-gray-200 dark:border-gray-800">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center text-gray-900 dark:text-white">
 
-        <Link to="/" className="font-bold text-xl hover:text-teal-400 transition-colors">
-          ⛓️ ChainPass
+        <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+          <img src="/assets/chainpass-full-logo.svg" alt="ChainPass" className="h-8" />
         </Link>
 
         {/* Desktop Menu */}
@@ -50,7 +50,7 @@ function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-gray-900 border-t border-gray-800">
+        <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
           <div className="flex flex-col gap-4 p-6">
             <Link
               to="/how-it-works"
