@@ -4,24 +4,26 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="ChainPass - Zero-knowledge identity verification infrastructure. We verify users are real. We don't store who they are." />
-    <meta name="keywords" content="identity verification, zero-knowledge, privacy, KYC, compliance, V.A.I." />
-
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="ChainPass - Zero-Knowledge Identity Verification" />
-    <meta property="og:description" content="We verify users are real. We don't store who they are." />
-    <meta property="og:site_name" content="ChainPass" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ChainPass - Zero-Knowledge Identity Verification" />
-    <meta name="twitter:description" content="We verify users are real. We don't store who they are." />
-
-    <title>ChainPass - Zero-Knowledge Identity Verification</title>
+    <meta name="description" content="ChainPass V.A.I. - Zero-knowledge identity verification. 100% Anonymous. 100% Accountable." />
+    <meta name="theme-color" content="#3B82F6" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>ChainPass - Verified Anonymous Identity</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered:', registration);
+            })
+            .catch((error) => {
+              console.log('SW registration failed:', error);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
