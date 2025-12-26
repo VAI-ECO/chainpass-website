@@ -68,11 +68,11 @@ export const FLOW_STEPS: FlowStep[] = [
 // ===================
 export const TOP10_PLATFORMS: Top10Item[] = [
   { num: 1, title: 'Zero Identity Storage', desc: 'Nothing to protect. Nothing to lose.', cost: '$0' },
-  { num: 2, title: 'Zero Breach Liability', desc: "Can't leak what you don't have.", cost: '$0' },
+  { num: 2, title: 'Zero Breach Liability', desc: "They can't steal what your platform doesn't have.", cost: '$0' },
   { num: 3, title: 'Government & Legal Exposure', desc: "Determined by you. We can't be compelled.", cost: '$0' },
   { num: 4, title: '100% Age Verification', desc: 'You set the age. We verify it.', cost: '$0' },
   { num: 5, title: 'Near-Zero Support Tickets', desc: 'No passwords. No takeovers. No headaches.', cost: '$0' },
-  { num: 6, title: '100% Real Users', desc: 'Every user verified. Guaranteed human.', cost: '$0' },
+  { num: 6, title: '100% Real Users', desc: 'Keep your platform bot-free—guaranteed!', cost: '$0' },
   { num: 7, title: 'KYC Done', desc: 'We built it. You benefit.', cost: '$0' },
   { num: 8, title: 'Special Requirements', desc: 'Let us know. Implementation free.', cost: '$0' },
   { num: 9, title: 'Guaranteed Compliance', desc: 'Every V.A.I. guaranteed compliant.', cost: '$0' },
@@ -83,16 +83,16 @@ export const TOP10_PLATFORMS: Top10Item[] = [
 // TOP 10 - USERS
 // ===================
 export const TOP10_USERS: Top10Item[] = [
-  { num: 1, title: 'Zero Data Breach Risk', desc: 'Nothing to steal.', cost: '' },
+  { num: 1, title: 'Zero Data Breach Risk', desc: 'V.A.I. platforms hold no personal data—by design.', cost: '' },
   { num: 2, title: 'Zero Data Selling', desc: "V.A.I. platforms can't sell what they don't have.", cost: '' },
   { num: 3, title: 'You Control Legal Exposure', desc: "Platform can't hand over what they never had.", cost: '' },
-  { num: 4, title: 'One V.A.I. — All Platforms', desc: 'Verify once. Use everywhere.', cost: '' },
+  { num: 4, title: 'One V.A.I. — All Platforms', desc: 'Use one V.A.I. number for all V.A.I. platforms.', cost: '' },
   { num: 5, title: 'Zero Account Takeover', desc: 'Your biometrics, your account.', cost: '' },
   { num: 6, title: 'Bot-Free Platforms', desc: 'Every user is a verified human.', cost: '' },
   { num: 7, title: 'All Users Screened', desc: 'Violent criminal registry checked.', cost: '' },
-  { num: 8, title: 'All Users Signed LE Disclosure', desc: 'Under penalty of perjury.', cost: '' },
-  { num: 9, title: 'Spam-Free Platforms', desc: "They don't know who you are.", cost: '' },
-  { num: 10, title: 'ChainPass V.A.I. Creation in Minutes', desc: 'Under 5 minutes. Works with all ChainPass V.A.I. platforms.', cost: '$99/year', isPaid: true },
+  { num: 8, title: 'All Users Signed LE Disclosure', desc: 'Legally signed under penalty of perjury.', cost: '' },
+  { num: 9, title: 'Spam-Free Platforms', desc: "You can't spam a number.", cost: '' },
+  { num: 10, title: 'ChainPass V.A.I. Creation in Minutes', desc: 'Onboarding in under 5 minutes. Works with all V.A.I. platforms.', cost: '$99/year', isPaid: true },
 ];
 
 // ===================

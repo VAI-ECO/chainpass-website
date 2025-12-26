@@ -2,19 +2,19 @@ const steps = [
   {
     num: 1,
     title: 'PLATFORM',
-    desc: 'User arrives from partner platform',
+    desc: 'User begins at ChainPass or partner site',
     highlight: false,
   },
   {
     num: 2,
     title: 'KYC + VOS',
-    desc: 'ID verified + violent offender screen',
+    desc: 'KYC verified + violent offender screened',
     highlight: false,
   },
   {
     num: 3,
-    title: 'CHAINPASS RECEIVES',
-    desc: '✓ Photo\n✓ Biometric\n✓ Clear/Flag',
+    title: 'CHAINPASS ONLY RECEIVES',
+    desc: '✓ Biometric photo\n✓ Clear/Flag',
     highlight: true,
   },
   {
@@ -48,17 +48,13 @@ export default function HowItWorksNew() {
           </h2>
 
           {/* Zero-knowledge subtitle */}
-          <p className="text-xl md:text-2xl text-[#00d4aa] font-semibold mt-4 mb-4">
-            Powered by zero-knowledge architecture.
-          </p>
-
-          {/* Subheadline */}
           <p className="
             text-3xl md:text-4xl
             font-bold
             mb-8
+            mt-4
           " style={{ color: 'var(--cp-accent-teal)' }}>
-            All we keep is a photo.
+            With ChainPass V.A.I. zero-knowledge architecture, all we keep is one photo.
           </p>
 
           {/* Link */}

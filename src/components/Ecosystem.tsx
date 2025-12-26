@@ -68,11 +68,12 @@ export default function Ecosystem() {
             max-w-xl mx-auto
             mb-8
           ">
-            Verify once. Use everywhere. Your V.A.I. works across the entire ecosystem—and every platform that joins after.
+            Verify once. Use the same V.A.I. # with all V.A.I. platforms. Your V.A.I. is the key to the entire ecosystem.
           </p>
 
-          {/* CTA */}
+          {/* CTA - Hidden until Vairify goes live */}
           <button className="
+            hidden
             px-8 py-4
             text-black font-bold text-lg
             rounded-lg

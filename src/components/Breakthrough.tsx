@@ -37,7 +37,7 @@ export default function Breakthrough() {
               </svg>
             </div>
             <span className="text-lg font-bold text-[var(--cp-text-primary)]">
-              While providing 100% anonymity—<span className="text-[#00d4aa]">GUARANTEED.</span>
+              Providing 100% anonymity for your users—<span className="text-[#00d4aa]">GUARANTEED.</span>
             </span>
           </div>
         </div>

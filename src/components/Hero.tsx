@@ -33,17 +33,23 @@ export default function Hero() {
           </p>
 
           {/* CTA */}
-          <button className="
-            inline-flex items-center gap-2
-            px-8 py-4
-            bg-[#00d4aa] hover:bg-[#00b892]
-            text-black font-bold text-lg
-            rounded-lg
-            shadow-lg hover:shadow-xl
-            transform hover:scale-105 active:scale-100
-            transition-all duration-200
-          ">
-            Get ChainPass V.A.I.
+          <button
+            onClick={() => {
+              const videoSection = document.querySelector('section.cp-section-secondary');
+              videoSection?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="
+              inline-flex items-center gap-2
+              px-8 py-4
+              bg-[#00d4aa] hover:bg-[#00b892]
+              text-black font-bold text-lg
+              rounded-lg
+              shadow-lg hover:shadow-xl
+              transform hover:scale-105 active:scale-100
+              transition-all duration-200
+            "
+          >
+            See How It Works
             <ChevronRight className="w-5 h-5" />
           </button>
 
