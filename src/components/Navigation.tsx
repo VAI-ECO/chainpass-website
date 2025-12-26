@@ -13,9 +13,9 @@ export default function Navigation() {
       </div>
 
       {/* Nav Links */}
-      <div className="flex gap-8 text-14 text-[#666]">
+      <div className="flex gap-8 text-14 text-gray-800">
         {NAV_LINKS.map((link) => (
-          <span key={link} className="cursor-pointer hover:text-cp-text transition-colors">
+          <span key={link} className="cursor-pointer hover:text-[#00d4aa] transition-colors">
             {link}
           </span>
         ))}
@@ -23,10 +23,10 @@ export default function Navigation() {
 
       {/* Right Side */}
       <div className="flex items-center gap-4">
-        <span className="text-14 text-[#666] cursor-pointer hover:text-cp-text transition-colors">
+        <span className="text-14 text-gray-800 cursor-pointer hover:text-[#00d4aa] transition-colors">
           VAI Forum ↗
         </span>
-        <button className="bg-cp-teal text-black px-5 py-2.5 rounded-8 font-semibold text-14 hover:opacity-90 transition-opacity">
+        <button className="bg-[#00d4aa] text-black px-5 py-2.5 rounded-8 font-semibold text-14 hover:opacity-90 transition-opacity">
           Get V.A.I.
         </button>
       </div>
