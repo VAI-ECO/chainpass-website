@@ -9,7 +9,7 @@ function Navigation() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center text-gray-900 dark:text-white">
 
         <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
-          <img src="/assets/chainpass-full-logo.svg" alt="ChainPass" className="h-8" />
+          <img src="/assets/chainpass-full-logo-light-bg.svg" alt="ChainPass" className="h-8" />
         </Link>
 
         {/* Desktop Menu */}
