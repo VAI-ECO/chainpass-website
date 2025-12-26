@@ -9,7 +9,7 @@ const trustBadges = [
   { name: 'MongoDB', src: '/assets/Mongo DB.svg', size: 'max-h-12' },
   { name: 'SOC 2', src: '/assets/Soc Compliant .svg', size: 'max-h-[55px]' }, // 15% increase
   { name: 'ISO 27001', src: '/assets/iso-27001.svg', size: 'max-h-[62px]' }, // 30% increase
-  { name: 'Stripe', src: '/assets/stripe.svg', size: 'max-h-12' },
+  { name: 'Stripe', src: '/assets/Stripe.svg', size: 'max-h-12' },
 ];
 
 export default function Hero() {
