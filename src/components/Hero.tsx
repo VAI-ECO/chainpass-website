@@ -1,15 +1,15 @@
 import { ChevronRight } from 'lucide-react';
 
 const trustBadges = [
-  { name: 'ComplyCube', src: '/assets/COMPLYCUBE.svg' },
-  { name: 'iDenfy', src: '/assets/Indenfy.svg' },
-  { name: 'Offenders.io', src: '/assets/Offenders.io.svg' },
-  { name: 'Proton Mail', src: '/assets/proton-mail.svg' },
-  { name: 'AWS', src: '/assets/AWS.svg' },
-  { name: 'MongoDB', src: '/assets/Mongo DB.svg' },
-  { name: 'SOC 2', src: '/assets/Soc Compliant .svg' },
-  { name: 'ISO 27001', src: '/assets/iso-27001.svg' },
-  { name: 'Stripe', src: '/assets/stripe.svg' },
+  { name: 'ComplyCube', src: '/assets/COMPLYCUBE.svg', size: 'max-h-12' },
+  { name: 'iDenfy', src: '/assets/Indenfy.svg', size: 'max-h-12' },
+  { name: 'Offenders.io', src: '/assets/Offenders.io.svg', size: 'max-h-12' },
+  { name: 'Proton Mail', src: '/assets/proton-mail.svg', size: 'max-h-[62px]' }, // 30% increase
+  { name: 'AWS', src: '/assets/AWS.svg', size: 'max-h-[62px]' }, // 30% increase (Azure/ChainPass)
+  { name: 'MongoDB', src: '/assets/Mongo DB.svg', size: 'max-h-12' },
+  { name: 'SOC 2', src: '/assets/Soc Compliant .svg', size: 'max-h-[55px]' }, // 15% increase
+  { name: 'ISO 27001', src: '/assets/iso-27001.svg', size: 'max-h-[62px]' }, // 30% increase
+  { name: 'Stripe', src: '/assets/stripe.svg', size: 'max-h-12' },
 ];
 
 export default function Hero() {
@@ -70,7 +70,7 @@ export default function Hero() {
                 <img
                   src={badge.src}
                   alt={badge.name}
-                  className="max-h-12 max-w-full object-contain"
+                  className={`${badge.size} max-w-full object-contain`}
                 />
               </div>
             ))}
