@@ -1,17 +1,5 @@
 import { ChevronRight } from 'lucide-react';
 
-const trustBadges = [
-  { name: 'ComplyCube', src: '/assets/COMPLYCUBE.svg', size: 'max-h-12' },
-  { name: 'iDenfy', src: '/assets/Indenfy.svg', size: 'max-h-12' },
-  { name: 'Offenders.io', src: '/assets/Offenders.io.svg', size: 'max-h-12' },
-  { name: 'Proton Mail', src: '/assets/proton-mail.svg', size: 'max-h-[62px]' }, // 30% increase
-  { name: 'AWS', src: '/assets/AWS.svg', size: 'max-h-[62px]' }, // 30% increase (Azure/ChainPass)
-  { name: 'MongoDB', src: '/assets/Mongo DB.svg', size: 'max-h-12' },
-  { name: 'SOC 2', src: '/assets/Soc Compliant .svg', size: 'max-h-[55px]' }, // 15% increase
-  { name: 'ISO 27001', src: '/assets/iso-27001.svg', size: 'max-h-[62px]' }, // 30% increase
-  { name: 'Stripe', src: '/assets/Stripe.svg', size: 'max-h-12' },
-];
-
 export default function Hero() {
   return (
     <section className="cp-section-primary min-h-[90vh] flex items-center">
@@ -22,14 +10,13 @@ export default function Hero() {
           {/* Headline */}
           <h1 className="leading-tight mb-6">
             <span className="block text-5xl lg:text-6xl font-black text-[var(--cp-text-primary)]">Secure</span>
-            <span className="block text-5xl lg:text-6xl font-black text-[var(--cp-text-primary)]">Innovative</span>
             <span className="block text-5xl lg:text-6xl font-black text-[#00d4aa]">Digital Verification</span>
             <span className="block text-3xl lg:text-4xl font-bold text-[var(--cp-text-primary)] mt-2">solutions for the real world</span>
           </h1>
 
           {/* Body */}
           <p className="text-lg text-[var(--cp-text-secondary)] max-w-lg mb-8">
-            <span className="font-bold text-[var(--cp-text-primary)]">ChainPass</span> provides zero-knowledge identity infrastructure that guarantees 100% anonymity with 100% accountability.
+            <span className="font-bold text-[var(--cp-text-primary)]">ChainPass</span> provides zero-knowledge identity infrastructure with anonymity and accountability in the same credential.
           </p>
 
           {/* CTA */}
@@ -52,29 +39,6 @@ export default function Hero() {
             See How It Works
             <ChevronRight className="w-5 h-5" />
           </button>
-
-          {/* Trust Badges */}
-          <div className="grid grid-cols-3 gap-2 mt-8">
-            {trustBadges.map((badge) => (
-              <div
-                key={badge.name}
-                className="
-                  bg-white
-                  border border-gray-200
-                  rounded-lg
-                  h-16
-                  flex items-center justify-center
-                  p-2
-                "
-              >
-                <img
-                  src={badge.src}
-                  alt={badge.name}
-                  className={`${badge.size} max-w-full object-contain`}
-                />
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Right Column - Hero Image */}

@@ -26,8 +26,14 @@ export default function Navigation() {
         <span className="text-14 text-gray-700 cursor-pointer hover:text-[#00d4aa] transition-colors font-medium">
           VAI Forum ↗
         </span>
-        <button className="bg-[#00d4aa] text-black px-5 py-2.5 rounded-8 font-semibold text-14 hover:bg-[#00b892] transition-colors">
-          Get V.A.I.
+        <button
+          onClick={() => {
+            const form = document.querySelector('section.cp-section-primary:last-of-type');
+            form?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="bg-[#00d4aa] text-black px-5 py-2.5 rounded-8 font-semibold text-14 hover:bg-[#00b892] transition-colors"
+        >
+          Integrate
         </button>
       </div>
     </nav>

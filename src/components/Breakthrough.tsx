@@ -17,28 +17,9 @@ export default function Breakthrough() {
           </h2>
 
           {/* Logos centered below text */}
-          <div className="flex items-center justify-center gap-8 mb-12">
+          <div className="flex items-center justify-center gap-8">
             <img src="/assets/vairify-icon-circular.svg" alt="Vairify" className="h-16 w-auto" />
             <img src="/assets/AVChexxx-Round.svg" alt="AVChexxx" className="h-16 w-auto" />
-          </div>
-
-          {/* Guarantee banner */}
-          <div className="
-            inline-flex items-center gap-3
-            px-8 py-4
-            bg-white dark:bg-[var(--cp-bg-card)]
-            border-2 border-[var(--cp-accent-teal)]
-            rounded-full
-            shadow-lg
-          ">
-            <div className="w-8 h-8 bg-[#00d4aa] rounded-full flex items-center justify-center">
-              <svg className="w-5 h-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-              </svg>
-            </div>
-            <span className="text-lg font-bold text-[var(--cp-text-primary)]">
-              Providing 100% anonymity for your users—<span className="text-[#00d4aa]">GUARANTEED.</span>
-            </span>
           </div>
         </div>
       </section>
@@ -94,12 +75,12 @@ export default function Breakthrough() {
             text-xl
             max-w-2xl mx-auto
           " style={{ color: 'var(--cp-text-secondary)' }}>
-            The first identity solution that guarantees
+            The identity solution with
           </p>
           <p className="text-xl mt-2">
-            <span className="font-bold" style={{ color: 'var(--cp-accent-teal)' }}>100% anonymity</span>
-            <span style={{ color: 'var(--cp-text-secondary)' }}> with </span>
-            <span className="font-bold" style={{ color: 'var(--cp-text-primary)' }}>100% accountability</span>
+            <span className="font-bold" style={{ color: 'var(--cp-accent-teal)' }}>anonymity</span>
+            <span style={{ color: 'var(--cp-text-secondary)' }}> and </span>
+            <span className="font-bold" style={{ color: 'var(--cp-text-primary)' }}>accountability</span>
           </p>
         </div>
       </section>

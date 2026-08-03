@@ -13,7 +13,7 @@ export default function Footer() {
               <span className="text-2xl font-bold" style={{ color: 'var(--cp-accent-teal)' }}>Pass</span>
             </div>
             <p className="text-sm text-gray-400">
-              The future of identity verification. Zero-knowledge architecture that guarantees anonymity with accountability.
+              The future of identity verification. Zero-knowledge architecture with anonymity and accountability.
             </p>
           </div>
 
