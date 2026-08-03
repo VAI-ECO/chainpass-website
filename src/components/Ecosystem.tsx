@@ -15,7 +15,7 @@ const platforms = [
   },
   {
     name: 'Avictria',
-    desc: 'Verified escort directory',
+    desc: 'Escort directory',
     logo: '/assets/3.svg',
     status: '',
     flagship: false,
@@ -36,7 +36,7 @@ const platforms = [
   },
   {
     name: 'Erotic Kneads',
-    desc: 'Massage services directory',
+    desc: 'Erotic massage directory',
     logo: '/assets/partner-erotic-kneads.svg',
     status: '',
     flagship: false,

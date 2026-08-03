@@ -70,12 +70,12 @@ export const TOP10_PLATFORMS: Top10Item[] = [
   { num: 1, title: 'Zero Identity Storage', desc: 'Nothing to protect. Nothing to lose.', cost: '$0' },
   { num: 2, title: 'Zero Breach Liability', desc: "They can't steal what your platform doesn't have.", cost: '$0' },
   { num: 3, title: 'Government & Legal Exposure', desc: "Determined by you. We can't be compelled.", cost: '$0' },
-  { num: 4, title: '100% Age Verification', desc: 'You set the age. We verify it.', cost: '$0' },
+  { num: 4, title: 'Age Verification', desc: 'You set the age. We verify it.', cost: '$0' },
   { num: 5, title: 'Near-Zero Support Tickets', desc: 'No passwords. No takeovers. No headaches.', cost: '$0' },
-  { num: 6, title: '100% Real Users', desc: 'Keep your platform bot-free—guaranteed!', cost: '$0' },
+  { num: 6, title: 'Real Users', desc: 'Keep your platform bot-free.', cost: '$0' },
   { num: 7, title: 'KYC Done', desc: 'We built it. You benefit.', cost: '$0' },
   { num: 8, title: 'Special Requirements', desc: 'Let us know. Implementation free.', cost: '$0' },
-  { num: 9, title: 'Guaranteed Compliance', desc: 'Every V.A.I. guaranteed compliant.', cost: '$0' },
+  { num: 9, title: 'Compliance', desc: 'Every V.A.I. compliant.', cost: '$0' },
   { num: 10, title: 'Criminal Screening', desc: 'Registry checked. Clear or Flagged.', cost: '$0' },
 ];
 
@@ -123,10 +123,10 @@ export const COMPARISON_USERS: ComparisonRow[] = [
 export const PARTNERS: PartnerCard[] = [
   { name: 'Vairify', desc: 'Safety platform for adult service providers', status: 'LIVE', flagship: true, logo: '/assets/vairify-circle-dark.svg' },
   { name: 'VAI Vault', desc: 'Secure document storage', status: 'Q1', logo: '/assets/Vai Vault.svg' },
-  { name: 'Avictria', desc: 'Verified escort directory', status: 'Q1', logo: '/assets/3.svg' },
+  { name: 'Avictria', desc: 'Escort directory', status: 'Q1', logo: '/assets/3.svg' },
   { name: 'AVChexxx', desc: 'Adult performer verification', status: 'Q1', logo: '/assets/AVChexx-LOGO.svg' },
   { name: 'Girlfriend Exchange', desc: 'Companion services platform', status: 'Q1', logo: '/assets/GFExhange.svg' },
-  { name: 'Erotic Kneads', desc: 'Massage services directory', status: 'Q1', logo: '/assets/partner-erotic-kneads.svg' },
+  { name: 'Erotic Kneads', desc: 'Erotic massage directory', status: 'Q1', logo: '/assets/partner-erotic-kneads.svg' },
 ];
 
 // ===================
