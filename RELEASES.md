@@ -94,19 +94,48 @@ gets built, or the CTA points at the signup form until it does.
 
 ---
 
+## Changing copy or a section — the design-tool round trip
+
+The releases are design-tool exports. To change a word or a section, change it in the design tool,
+not in the HTML.
+
+1. **Edit in the design tool.** Export.
+2. **Replace the release file it came from** — `releases/R1-go-live.html`, R2 or R3. Keep the
+   filename. Do not drop it on `index.html`; that is a copy and the next switch overwrites it.
+3. **Re-apply the signup-form fix.** ⚠️ **A fresh export always ships the broken form back.** The
+   design source has `submit: (e) => { e.preventDefault(); this.setState({ sent: true }); }` — no
+   network call — showing *"Received. We will call you within one business day."* while storing
+   nothing. Every export carries it until the design source itself is fixed.
+   Check before shipping:
+
+   ```bash
+   grep -c "fetch(LEAD_ENDPOINT" releases/R1-go-live.html   # must be 1, not 0
+   ```
+
+4. **Switch and verify:** `./go-live.sh R1`
+5. **Commit and push.**
+6. **Deploy** — see `docs/global/DEPLOY.md`. The push alone does nothing.
+7. **Prove it:** `curl -s "https://chainpass.io/?cb=$RANDOM" | head -c 200`
+
+### Fix it once, in the design source
+
+Step 3 repeats forever until the `submit` handler is changed **in the design tool**, so exports
+come out correct. Until then every copy change silently reintroduces a form that tells platforms
+they will get a call and loses the lead. That is the single highest-value thing to fix about this
+site.
+
+---
+
 ## How it goes live
 
-GitHub Actions → Azure Static Web Apps, on push to `main`. The workflow is
-`.github/workflows/azure-static-web-apps-orange-coast-047448e10.yml`.
+**Hetzner. Not Azure, not Vercel, not Netlify** — those were pre-migration and their config files
+have been deleted from this repo.
 
-Two things to know before the first push to `main`:
+The site runs as a Docker container, `chainpass-website`, serving nginx, routed by Traefik.
 
-1. The workflow sets `output_location: "dist"`, left over from the Vite app this repo used to hold.
-   There is no `dist` any more — the site is static HTML at the repo root. **It must be `"/"` or
-   Azure deploys nothing.**
-2. Pushing a branch that touches that workflow file needs a token with `workflow` scope. The
-   `static-site-2026-08-31` branch had the file removed to get around that; it has to be restored
-   before merge.
+**There is no auto-deploy. Pushing to `main` deploys nothing.** A commit is not a deployment. The
+deploy is a manual step on the server, documented in `docs/global/DEPLOY.md`, and it clones
+**`main`** — work on a branch ships nothing.
 
 ---
 
