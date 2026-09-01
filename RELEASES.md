@@ -66,6 +66,10 @@ The three slots exist and are empty. They are `<section>` ids in the page:
 Each needs a `<video>` element with a poster image. **R2 does not ship until all three are filled
 and play.** An empty slot on a page called "with video" is a broken promise to the visitor.
 
+**To ship it:** drop the files into `media/` with the exact names in `media/README.md`, then say
+*"videos are in, put R2 up."* That file holds the slot map, the markup, the compression rule and
+the switch — the chair needs nothing else and should not ask.
+
 ---
 
 ## The two entry points — identical in all three
