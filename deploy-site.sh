@@ -143,5 +143,5 @@ echo
 echo "Verifying what https://$DOMAIN now serves:"
 sleep 4
 curl -fsS "https://$DOMAIN/?cb=$RANDOM" -o "$STAGE/live.html"
-grep -oim1E '<title>[^<]*</title>|Unpacking' "$STAGE/live.html" | sed 's/^/   /'
+grep -Eio -m 1 '<title>[^<]*</title>|Unpacking' "$STAGE/live.html" | sed 's/^/   /'
 echo "   roll back with: ./deploy-site.sh --back"
