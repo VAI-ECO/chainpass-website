@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment variables — this repo is PUBLIC
+.env
+.env.local
+.env.production

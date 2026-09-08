@@ -1,3 +1,8 @@
+> **START HERE:** read `~/vai-workspaces/OPS-01_LIVE_STATE.md` before touching
+> anything in this repo. It holds the verified live state — server, routing, which build is
+> deployed, and what is broken. Documents inside this repo have been wrong about the deploy
+> path. Verified 3 Sep 2026.
+
 # ChainPass — website
 
 The public ChainPass site. **Static HTML.** No framework, no build step, no server.
@@ -26,8 +31,9 @@ Then commit and push. A switch that is not pushed has changed nothing.
 
 **Hetzner.**
 
-How files get from this repo to that box **is not documented anywhere**, including here. That gap
-is real and is recorded in `STATE.md`. Do not guess it from leftover config.
+Deploy the selected root release with `./deploy-site.sh`. The script checks for competing
+Traefik routes, verifies transferred bytes, preserves the prior image as `:prev`, and swaps the
+`vai-chainpass-site` container. `./deploy-site.sh --back` restores the prior image.
 
 This repo previously carried config for hosts it does not use — a GitHub Actions workflow for
 Azure Static Web Apps, and a `vercel.json` from the Vite template it was built on. Both were

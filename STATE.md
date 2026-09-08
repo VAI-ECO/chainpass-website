@@ -1,9 +1,12 @@
+> ⚠️ **Parts of this file are stale.** Verified live state is in
+> `~/vai-workspaces/OPS-01_LIVE_STATE.md` — read that first. (3 Sep 2026)
+
 # STATE — chainpass-website
 
 Read this first. It is written so a seat arriving cold knows where it is without asking the owner
 a single question. If something here is wrong, fix this file in the same commit as the work.
 
-**Last verified:** 31 Aug 2026
+**Last verified:** 8 Sep 2026
 
 ---
 
@@ -24,9 +27,9 @@ not match and that has cost sessions before.
 | Remote | `VAI-ECO/chainpass-website` (public) |
 | Container path | `/data/vai-workspaces/chainpass-website` |
 | Mac path | `~/vai-workspaces/chainpass-splash` |
-| Working branch | `static-site-2026-08-31` |
+| Working branch | `main` |
 | Deploy branch | `main` |
-| Deploys via | GitHub Actions → Azure Static Web Apps |
+| Deploys via | ⚠️ **NOT Azure. There is no Azure and no `.github/workflows` in this repo.** Hetzner `2.28.18.138` via `./deploy-site.sh`. [V] 3 Sep 2026 |
 
 Not Vercel. A `vercel.json` was left behind by the old template and means nothing.
 
@@ -35,16 +38,12 @@ Not Vercel. A `vercel.json` was left behind by the old template and means nothin
 ## Layout
 
 ```
-index.html                  the live release — a COPY, never edit it directly
-releases/R1-go-live.html    front page, no video          ← ships first
-releases/R2-go-live-video.html   same page + 3 video slots ← waiting on video
-releases/R3-three-levels.html    different front page      ← months out
-go-live.sh                  switches which release is live, with rollback
-RELEASES.md                 the release process in full
-ChainPass API.dc.html       ┐
-ChainPass Features.dc.html  │ back pages, shared by all three releases
-Partner Dashboard.dc.html   ┘
-public/                     favicons, trust badges, partner logos
+index.html                       root copy of the selected live release
+releases/R1-no-video/            launch site; one V.A.I.; six audited pages
+releases/R2-with-video/          later release with video slots
+releases/R3-three-levels/        Go / Access / Pro release; months out
+go-live.sh                       selects R1, R2, or R3 locally
+deploy-site.sh                   deploys the selected root release to Hetzner
 ```
 
 There is no `docs/`, no canon and no screen register. **That is deliberate** — owner's call,
@@ -53,22 +52,16 @@ There is no `docs/`, no canon and no screen register. **That is deliberate** —
 
 ---
 
-## What blocks going live
+## Current launch boundary
 
-Three things. All three are named in `RELEASES.md` and none is started.
-
-1. **The signup form collects nothing.** `LEAD_ENDPOINT` is still `PASTE_ENDPOINT_URL_HERE`. The
-   form behaves honestly — it tells the visitor it did not send and offers
-   `platforms@chainpass.io` — but no lead is captured. Owner has a Proton SMTP token sealed in the
-   BMacOS Vault; the endpoint to receive the POST does not exist yet.
-   **Changing it means changing all four files** — the three releases and `index.html`.
-2. **`ChainPass Get Your VAI.dc.html` does not exist.** Every release links to it. It is the main
-   CTA on every page and it 404s. The page was never built. Either build it, or point the CTA at
-   `#signup` until it is.
-3. **The Azure workflow is stale.** `output_location: "dist"` — a Vite build directory that no
-   longer exists. It must be `"/"` or a push to `main` deploys nothing. The workflow file was also
-   removed from the working branch to get past a token missing `workflow` scope, and has to be
-   restored before merge.
+- R1 is the public launch: one V.A.I., without video.
+- R2 preserves the with-video version for later.
+- R3 preserves Go / Access / Pro for a later launch measured in months.
+- R1 has a real Get Your V.A.I. page and six audited public pages.
+- Until a form endpoint is activated, platform and preregistration forms open a prepared email;
+  they do not claim that a server submission occurred.
+- API rows distinguish Built, Activation required, and Planned endpoints.
+- Production deployment is manual through `./deploy-site.sh`; pushing alone does not deploy.
 
 ---
 
