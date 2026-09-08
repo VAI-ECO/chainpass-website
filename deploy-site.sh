@@ -142,5 +142,6 @@ ssh -i $KEY $BOX "docker stop $NAME >/dev/null 2>&1 || true
 echo
 echo "Verifying what https://$DOMAIN now serves:"
 sleep 4
-curl -s "https://$DOMAIN/?cb=$RANDOM" | head -c 400 | grep -oiE '<title>[^<]*</title>|Unpacking' | head -1 | sed 's/^/   /'
+curl -fsS "https://$DOMAIN/?cb=$RANDOM" -o "$STAGE/live.html"
+grep -oim1E '<title>[^<]*</title>|Unpacking' "$STAGE/live.html" | sed 's/^/   /'
 echo "   roll back with: ./deploy-site.sh --back"
