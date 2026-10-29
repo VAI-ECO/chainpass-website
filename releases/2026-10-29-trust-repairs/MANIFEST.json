@@ -1,0 +1,14 @@
+[
+  {
+    "site": "chainpass",
+    "path": "index.html",
+    "before": "ff50e6d79dcf1756527b56e16796df532c0af37bb0d300f11001bdb869f50a71",
+    "after": "46e8e8e37d5029564f7cd80e109f3cbd8c69f0c7904889d103a1a4a054dddf44"
+  },
+  {
+    "site": "chainpass",
+    "path": "legal/en/chainpass-privacy.html",
+    "before": "b5d5b3adb23187b900cbd6a7b59afaaeb5e00a2aaf6df434eb0e2569a423f596",
+    "after": "3bcfb62d9d795756b6245197a8f8ed0b566f55340f0cdb54052c89d7208c39f1"
+  }
+]
